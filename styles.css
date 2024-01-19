@@ -1,0 +1,13 @@
+body{
+    
+   display: flex;
+   justify-content: center;
+
+}
+.form{
+    background-color: whitesmoke;
+    width: 40%;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+}

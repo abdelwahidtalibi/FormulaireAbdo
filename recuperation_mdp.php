@@ -6,14 +6,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-<form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-      email <input type="email" name="email" value=""> <br>
-     <input type="submit" value="Envoyer" name="Envoyer">
-     
-</form>
+    <div class="form">
+    <div class="container mt-5">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email :</label>
+            <input type="email" class="form-control" id="email" name="email" value="">
+        </div>
+        <button type="submit" class="btn btn-primary" name="Envoyer">Envoyer</button>
+    </form>
+</div>
+
+    </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <?php 
 use PHPMailer\PHPMailer\PHPMailer;

@@ -3,34 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-     nom <input type="text" name="nom" value=""> <br>
-     prenom <input type="text" name="prenom" value=""> <br>
-     email <input type="email" name="email" value=""> <br>
-     pseudo <input type="text" name="pseudo" value=""> <br>
-     password <input type="password" name="password" value=""> <br>
-     info <input type="text" name="info" value=""> <br>
-    <label for="niveau">Choisissez un niveau :</label>
-    <select id="niveau" name="niveau">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-    </select>
-    date_ins <input type="date" name="date_ins" value=""> <br>
-    date_log <input type="date" name="date_log" value=""> <br>
-    <label for="active">active:</label>
-    <select id="active" name="active">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        
-    </select>
-    <input type="submit" value="Envoyer" name="Envoyer">
-</form>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Inscription</title>
+    <!-- Intégration de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="form">
 
+<div class="container mt-5">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom :</label>
+            <input type="text" class="form-control" id="nom" name="nom" value="">
+        </div>
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom :</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" value="">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email :</label>
+            <input type="email" class="form-control" id="email" name="email" value="">
+        </div>
+        <div class="mb-3">
+            <label for="pseudo" class="form-label">Pseudo :</label>
+            <input type="text" class="form-control" id="pseudo" name="pseudo" value="">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe :</label>
+            <input type="password" class="form-control" id="password" name="password" value="">
+        </div>
+        <div class="mb-3">
+            <label for="info" class="form-label">Info :</label>
+            <input type="text" class="form-control" id="info" name="info" value="">
+        </div>
+        <div class="mb-3">
+            <label for="niveau" class="form-label">Choisissez un niveau :</label>
+            <select class="form-select" id="niveau" name="niveau">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="date_ins" class="form-label">Date d'inscription :</label>
+            <input type="date" class="form-control" id="date_ins" name="date_ins" value="">
+        </div>
+        <div class="mb-3">
+            <label for="date_log" class="form-label">Date de dernière connexion :</label>
+            <input type="date" class="form-control" id="date_log" name="date_log" value="">
+        </div>
+        <div class="mb-3">
+            <label for="active" class="form-label">Actif :</label>
+            <select class="form-select" id="active" name="active">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" name="Envoyer">Envoyer</button>
+    </form>
+</div>
+
+</div>
+
+
+<!-- Intégration de Bootstrap JS (facultatif, dépend de vos besoins) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <?php 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

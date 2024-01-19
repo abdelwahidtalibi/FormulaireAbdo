@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 
@@ -10,12 +12,26 @@
 
 
 <body>
-    <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-      pseudo <input type="text" name="pseudo" value=""> <br>
-     password <input type="password" name="password" value=""> <br>
-     <input type="submit" value="Envoyer" name="Envoyer">
-     
-</form>
+
+<div class="form">
+<div class="container mt-5">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <div class="mb-3">
+            <label for="pseudo" class="form-label">Pseudo :</label>
+            <input type="text" class="form-control" id="pseudo" name="pseudo" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe :</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </form>
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
 <?php
 session_start();
 if(isset($_POST["Envoyer"])) {
